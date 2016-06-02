@@ -1,0 +1,42 @@
+/*Author: Eric Chen*/
+body {
+  background: #f4f4f4;
+  font-family: arial;
+}
+.container {
+  padding: 30px 0 0 200px;
+  font-family: inherit;
+}
+.img-responsive {
+  width: 100%;
+}
+.probox {
+  width: 300px;
+  height: 350px;
+  background: #f4f4f4;
+  padding: 10px;
+  position: relative;
+  border: 1px solid #dbdbdb;
+  margin: 5px;
+}
+.probox .probox_frontbg,
+.probox .probox_stripe {
+  position: absolute;
+  width: 300px;
+  height: 350px;
+  top: 10px;
+  left: 10px;
+}
+.probox .probox_frontbg > p,
+.probox .probox_stripe > p {
+  background: rgba(3, 3, 3, 0.5);
+  border-radius: 4px;
+  text-align: center;
+  margin: auto auto;
+  color: #fff;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+.bgbox {
+  width: 320px;
+}

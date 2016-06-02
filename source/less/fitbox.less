@@ -1,0 +1,47 @@
+@bg-gray:#f4f4f4;
+body{
+	background: @bg-gray;
+	font-family: arial;
+}
+.container {
+	padding: 30px 0 0 200px;
+	font-family: inherit;
+
+}
+.img-responsive {
+	width: 100%;
+}
+.probox {
+	width: 300px;
+	height: 350px;
+	background: @bg-gray;
+	padding: 10px;
+	position: relative;
+	border:1px solid darken(@bg-gray, 10%);
+	margin: 5px;
+
+	.probox_frontbg,.probox_stripe {
+		position: absolute;
+		width: 300px;
+		height:350px;
+		top:10px;
+		left: 10px;
+
+		&> p {
+			background: rgba(3,3,3,.5);
+			border-radius: 4px;
+			text-align: center;
+			margin: auto auto;
+			color: #fff;
+			font-size: 1.5em;
+			line-height: 1.5em;
+		}
+	}
+}
+.bgbox {
+	width: 320px;
+
+	.bgbox_title {
+	}
+}
+
