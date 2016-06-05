@@ -7,21 +7,23 @@ module.exports = function(grunt) { //Wrapper
 
         uglify: {
             options: {
-                banner: '/*Author: Eric Chen*/' // 版权信息
+                banner: '/*Author: Eric Chen, ericitnz@gmail.com*/' // 版权信息
             },
             build: {
-                src: 'source/js/fitbox.js', //要压缩的源文件，我们也可以用*表示通配，比如'src/*.js'
-                dest: 'dist/js/fitbox.min.js' //压缩后输出的位置
+                src: 'source/js/flipbox-3d.js', //要压缩的源文件，我们也可以用*表示通配，比如'src/*.js'
+                dest: 'dist/js/flipbox-3d.min.js' //压缩后输出的位置
             }
         },
 
         less:{
             development: {
                 options:{
-                    banner:'/*Author: Eric Chen*/'
+                    banner:'/*Author: Eric Chen, ericitnz@gmail.com*/'
                 },
                 files:{
-                    'dist/css/fitbox.css':'source/less/fitbox.less'
+                    'dist/css/fitbox.css':'source/less/fitbox.less',
+                    'dist/css/flipbox.css':'source/less/flipbox.less',
+                    'dist/css/flipbox-3d.css':'source/less/flipbox-3d.less'
                 }
             }
         },
@@ -39,13 +41,13 @@ module.exports = function(grunt) { //Wrapper
         watch:{   
             js:{
                 files:[
-                'source/js/fitbox.js'  //要监控的js
+                'source/js/*.js'  //要监控的js
                 ],
                 tasks:['uglify']
             },
             script:{
                 files:[
-                'source/less/fitbox.less'
+                'source/less/*.less'
                 ],
                 tasks:['less']
             }
@@ -54,7 +56,7 @@ module.exports = function(grunt) { //Wrapper
 
     grunt.loadNpmTasks('grunt-contrib-uglify');     // 载入 "uglify" 插件任务
     grunt.loadNpmTasks('grunt-contrib-watch');  //载入watch插件人物
-    grunt.loadNpmTasks('grunt-contrib-less');  //载入watch插件人物
+    grunt.loadNpmTasks('grunt-contrib-less');  //载入less插件人物
     grunt.loadNpmTasks('grunt-contrib-cssmin'); 
     grunt.loadNpmTasks('grunt-html-inspector'); //HTML检查
 

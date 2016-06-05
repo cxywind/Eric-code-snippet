@@ -1,0 +1,89 @@
+/*Author: Eric Chen, ericitnz@gmail.com*/
+.transform-style {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.backface-visibility {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+body {
+  background: #f4f4f4;
+}
+.container {
+  margin-top: 100px;
+}
+.row {
+  margin-top: 50px;
+}
+.flipbox {
+  position: relative;
+  -webkit-transform: perspective(1000px) rotatex(0deg) translateZ(-90px);
+  -moz-transform: perspective(1000px) rotatex(0deg) translateZ(-90px);
+  -ms-transform: perspective(1000px) rotatex(0deg) translateZ(-90px);
+  -o-transform: perspective(1000px) rotatex(0deg) translateZ(-90px);
+  transform: perspective(1000px) rotatex(0deg) translateZ(-90px);
+}
+.flipbox .flipper {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 500px;
+  -moz-perspective: 500px;
+  -ms-perspective: 500px;
+  -o-perspective: 500px;
+  perspective: 500px;
+}
+.flipbox .front_box {
+  position: absolute;
+  -webkit-transform: perspective(1000px) rotatex(0deg) translateZ(90px);
+  -moz-transform: perspective(1000px) rotatex(0deg) translateZ(90px);
+  -ms-transform: perspective(1000px) rotatex(0deg) translateZ(90px);
+  -o-transform: perspective(1000px) rotatex(0deg) translateZ(90px);
+  transform: perspective(1000px) rotatex(0deg) translateZ(90px);
+}
+.flipbox .front_box > span {
+  position: absolute;
+  font-size: 1.2em;
+  padding: 10px;
+  background: #f4f4f4;
+}
+.flipbox .back_box {
+  position: absolute;
+  -webkit-transform: perspective(1000px) rotatex(-90deg) translateZ(90px);
+  -moz-transform: perspective(1000px) rotatex(-90deg) translateZ(90px);
+  -ms-transform: perspective(1000px) rotatex(-90deg) translateZ(90px);
+  -o-transform: perspective(1000px) rotatex(-90deg) translateZ(90px);
+  transform: perspective(1000px) rotatex(-90deg) translateZ(90px);
+  background: #dbdbdb;
+  padding: 10px;
+}
+.flipbox:hover .front_box {
+  -webkit-transform: perspective(1000px) rotatex(90deg) translateZ(90px);
+  -moz-transform: perspective(1000px) rotatex(90deg) translateZ(90px);
+  -ms-transform: perspective(1000px) rotatex(90deg) translateZ(90px);
+  -o-transform: perspective(1000px) rotatex(90deg) translateZ(90px);
+  transform: perspective(1000px) rotatex(90deg) translateZ(90px);
+  z-index: 1000;
+}
+.flipbox:hover .back_box {
+  -webkit-transform: perspective(1000px) rotatex(0deg) translateZ(90px);
+  -moz-transform: perspective(1000px) rotatex(0deg) translateZ(90px);
+  -ms-transform: perspective(1000px) rotatex(0deg) translateZ(90px);
+  -o-transform: perspective(1000px) rotatex(0deg) translateZ(90px);
+  transform: perspective(1000px) rotatex(0deg) translateZ(90px);
+  z-index: 1000;
+}

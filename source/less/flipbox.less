@@ -1,0 +1,58 @@
+@import "mixins.less";
+
+body {
+	background: @main-gray;
+}
+
+.container {
+	margin-top: 100px;
+}
+
+.flipbox {
+	position: relative;
+
+	.flipper {
+		.backface-visibility;
+		.transition(.3s);
+		.transform-style;
+	}
+
+	.front_box {
+		position: absolute;
+		text-align: center;
+		z-index: 2;
+		.rotatey(0);
+
+		&> span {
+			position: absolute;
+			top: 20%;
+			left: 10%;
+			font-size: 1.2em;
+			padding: 10px;
+			background:@main-gray;
+		}
+	}
+
+	.back_box {
+		position: absolute;
+		text-align: left;
+		z-index: 1;
+		background: yellow;
+		padding: 10px;
+		border-radius: 6px;
+		.rotatey(-180deg);
+	}
+
+	&:hover {
+
+		.front_box {
+			.rotatey(180deg);
+			z-index: 1;
+		}
+		
+		.back_box {
+			z-index:2;
+			.rotatey(0deg);
+		}
+	}
+}

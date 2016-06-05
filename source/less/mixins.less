@@ -1,0 +1,62 @@
+@main-gray:#f4f4f4;
+
+// Transform-RotateY compatibility 
+.rotatey(@deg:180deg) {
+  -webkit-transform: rotateY(@deg);
+	   -moz-transform: rotateY(@deg);
+	    -ms-transform: rotateY(@deg);
+	     -o-transform: rotateY(@deg);
+          transform: rotateY(@deg);
+}
+
+// Transform-RotateY compatibility 
+.rotatex(@deg:90deg) {
+  -webkit-transform: rotateX(@deg);
+	   -moz-transform: rotateX(@deg);
+	    -ms-transform: rotateX(@deg);
+	     -o-transform: rotateX(@deg);
+          transform: rotateX(@deg);
+}
+
+.transition(@time:.5s,@animation:ease-in-out) {
+	-webkit-transition:all @time @animation;
+	   -moz-transition:all @time @animation;
+		  -ms-transition:all @time @animation;
+	     -o-transition:all @time @animation;
+	        transition:all @time @animation;
+}
+
+.perspective(@length:500px) {
+	-webkit-perspective:@length;
+	   -moz-perspective:@length;
+		  -ms-perspective:@length;
+	     -o-perspective:@length;
+	        perspective:@length;
+}
+
+.transform-style {
+	-webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+       -o-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.backface-visibility {
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	    -ms-backface-visibility: hidden;
+	     -o-backface-visibility: hidden;
+	        backface-visibility: hidden;
+}
+
+.transform (@perspective:500px, @rotateX:0deg,@translateZ:0px) {
+	-webkit-transform: perspective(@perspective) rotatex(@rotateX) translateZ(@translateZ);
+	 	 -moz-transform: perspective(@perspective) rotatex(@rotateX) translateZ(@translateZ);
+	    -ms-transform: perspective(@perspective) rotatex(@rotateX) translateZ(@translateZ);
+	     -o-transform: perspective(@perspective) rotatex(@rotateX) translateZ(@translateZ);
+	        transform: perspective(@perspective) rotatex(@rotateX) translateZ(@translateZ);
+}
+
+
+
